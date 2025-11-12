@@ -1,0 +1,26 @@
+.square {
+  width: 80px;
+  height: 80px;
+  font-size: 2rem;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.square:hover:not(:disabled) {
+  transform: scale(1.05);
+}
+
+.square[data-winning='true'] {
+  background-color: var(--mantine-color-green-6);
+  animation: pulse 0.5s ease-in-out;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
